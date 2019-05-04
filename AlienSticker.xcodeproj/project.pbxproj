@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7E080C600501B3CD54012B4 /* Pods_AlienSticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908C99ADC41F25CFC0229805 /* Pods_AlienSticker.framework */; };
+		B60821A8227B2BB600EE9F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60821A7227B2BB600EE9F66 /* AppDelegate.swift */; };
+		B60821AD227B2BB600EE9F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60821AB227B2BB600EE9F66 /* Main.storyboard */; };
+		B60821AF227B2BB800EE9F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B60821AE227B2BB800EE9F66 /* Assets.xcassets */; };
+		B60821B2227B2BB800EE9F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B60821B0227B2BB800EE9F66 /* LaunchScreen.storyboard */; };
+		B60821BA227B2F5500EE9F66 /* AppListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60821B9227B2F5500EE9F66 /* AppListView.swift */; };
+		B64AF4C4227C9A780026C383 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64AF4C3227C9A780026C383 /* Stickers.xcassets */; };
+		B64AF4C8227C9A780026C383 /* iMessageExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B64AF4C1227C9A760026C383 /* iMessageExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B64AF4E1227CC6C90026C383 /* StickerPackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4CF227CC6C70026C383 /* StickerPackManager.swift */; };
+		B64AF4E2227CC6C90026C383 /* Limits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4D0227CC6C70026C383 /* Limits.swift */; };
+		B64AF4E3227CC6C90026C383 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4D2227CC6C70026C383 /* ImageData.swift */; };
+		B64AF4E5227CC6C90026C383 /* WebPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4D4227CC6C70026C383 /* WebPManager.swift */; };
+		B64AF4E6227CC6C90026C383 /* StickerPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4D5227CC6C70026C383 /* StickerPack.swift */; };
+		B64AF4E7227CC6C90026C383 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4D6227CC6C70026C383 /* Sticker.swift */; };
+		B64AF4E8227CC6C90026C383 /* Interoperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AF4D7227CC6C70026C383 /* Interoperability.swift */; };
+		B64AF4F2227CC83A0026C383 /* pack.png in Resources */ = {isa = PBXBuildFile; fileRef = B64AF4F1227CC83A0026C383 /* pack.png */; };
+		B64AF52D227CE2630026C383 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B64AF524227CE2620026C383 /* YYImageCoder.m */; };
+		B64AF52E227CE2630026C383 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B64AF526227CE2620026C383 /* YYSpriteSheetImage.m */; };
+		B64AF52F227CE2630026C383 /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B64AF527227CE2630026C383 /* YYImage.m */; };
+		B64AF530227CE2630026C383 /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B64AF528227CE2630026C383 /* YYFrameImage.m */; };
+		B64AF531227CE2630026C383 /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64AF529227CE2630026C383 /* YYAnimatedImageView.m */; };
+		B64AF532227CE2750026C383 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF521227CDEBE0026C383 /* WebP.framework */; };
+		B64AF533227CE2C90026C383 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF506227CD4630026C383 /* UIKit.framework */; };
+		B64AF534227CE2D30026C383 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF508227CD46B0026C383 /* CoreFoundation.framework */; };
+		B64AF535227CE2DA0026C383 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF50A227CD4720026C383 /* QuartzCore.framework */; };
+		B64AF536227CE2E00026C383 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF50C227CD4790026C383 /* AssetsLibrary.framework */; };
+		B64AF537227CE2E80026C383 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF50E227CD4810026C383 /* ImageIO.framework */; };
+		B64AF538227CE2EF0026C383 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF510227CD48A0026C383 /* Accelerate.framework */; };
+		B64AF539227CE2F90026C383 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF512227CD4910026C383 /* MobileCoreServices.framework */; };
+		B64AF53A227CE3000026C383 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B64AF514227CD4A20026C383 /* libz.tbd */; };
+		B6680117227B7BAA000F8523 /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680116227B7BAA000F8523 /* StickerView.swift */; };
+		B6680119227B967C000F8523 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680118227B967C000F8523 /* AppStore.swift */; };
+		B668011C227B96A6000F8523 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668011B227B96A6000F8523 /* AppCell.swift */; };
+		B6680120227BA42B000F8523 /* StickerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668011F227BA42B000F8523 /* StickerStore.swift */; };
+		B6680122227BA5B2000F8523 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680121227BA5B2000F8523 /* NavigationController.swift */; };
+		B6680124227BA5DD000F8523 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680123227BA5DD000F8523 /* TabBarController.swift */; };
+		B6680126227BA6F5000F8523 /* StickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680125227BA6F5000F8523 /* StickerCell.swift */; };
+		B6680129227BAF6F000F8523 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680128227BAF6F000F8523 /* MenuView.swift */; };
+		B668012B227BB0F8000F8523 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668012A227BB0F8000F8523 /* MenuCell.swift */; };
+		B668012E227BB255000F8523 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B668012D227BB255000F8523 /* WebKit.framework */; };
+		B6680130227C2113000F8523 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B668012F227C2113000F8523 /* StoreKit.framework */; };
+		B6680132227C45F1000F8523 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6680131227C45F1000F8523 /* WebView.swift */; };
+		B6680135227C4DBA000F8523 /* impressum.html in Resources */ = {isa = PBXBuildFile; fileRef = B6680134227C4DBA000F8523 /* impressum.html */; };
+		B6680137227C5071000F8523 /* datenschutz.html in Resources */ = {isa = PBXBuildFile; fileRef = B6680136227C5071000F8523 /* datenschutz.html */; };
+		B6680139227C5077000F8523 /* lizenzen.html in Resources */ = {isa = PBXBuildFile; fileRef = B6680138227C5077000F8523 /* lizenzen.html */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B64AF4C6227C9A780026C383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B608219C227B2BB600EE9F66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B64AF4C0227C9A760026C383;
+			remoteInfo = iMessageExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B64AF4CC227C9A780026C383 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B64AF4C8227C9A780026C383 /* iMessageExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		122AC5C5A32F3E252198C07A /* Pods-AlienSticker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienSticker.debug.xcconfig"; path = "Target Support Files/Pods-AlienSticker/Pods-AlienSticker.debug.xcconfig"; sourceTree = "<group>"; };
+		8CF607E243E1F5BFCC752FA8 /* Pods-AlienSticker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienSticker.release.xcconfig"; path = "Target Support Files/Pods-AlienSticker/Pods-AlienSticker.release.xcconfig"; sourceTree = "<group>"; };
+		908C99ADC41F25CFC0229805 /* Pods_AlienSticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlienSticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60821A4227B2BB600EE9F66 /* AlienSticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienSticker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B60821A7227B2BB600EE9F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B60821AC227B2BB600EE9F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B60821AE227B2BB800EE9F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B60821B1227B2BB800EE9F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B60821B3227B2BB800EE9F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B60821B9227B2F5500EE9F66 /* AppListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListView.swift; sourceTree = "<group>"; };
+		B64AF4C1227C9A760026C383 /* iMessageExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64AF4C3227C9A780026C383 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		B64AF4C5227C9A780026C383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B64AF4CE227CC6C60026C383 /* AlienSticker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlienSticker-Bridging-Header.h"; sourceTree = "<group>"; };
+		B64AF4CF227CC6C70026C383 /* StickerPackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackManager.swift; sourceTree = "<group>"; };
+		B64AF4D0227CC6C70026C383 /* Limits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limits.swift; sourceTree = "<group>"; };
+		B64AF4D2227CC6C70026C383 /* ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		B64AF4D4227CC6C70026C383 /* WebPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPManager.swift; sourceTree = "<group>"; };
+		B64AF4D5227CC6C70026C383 /* StickerPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPack.swift; sourceTree = "<group>"; };
+		B64AF4D6227CC6C70026C383 /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		B64AF4D7227CC6C70026C383 /* Interoperability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interoperability.swift; sourceTree = "<group>"; };
+		B64AF4EF227CC6FC0026C383 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = AlienSticker/Dependencies/WebP.framework; sourceTree = "<group>"; };
+		B64AF4F1227CC83A0026C383 /* pack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pack.png; sourceTree = "<group>"; };
+		B64AF501227CD2CC0026C383 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = Pods/YYImage/Vendor/WebP.framework; sourceTree = "<group>"; };
+		B64AF506227CD4630026C383 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B64AF508227CD46B0026C383 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		B64AF50A227CD4720026C383 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B64AF50C227CD4790026C383 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		B64AF50E227CD4810026C383 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		B64AF510227CD48A0026C383 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B64AF512227CD4910026C383 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B64AF514227CD4A20026C383 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B64AF51B227CD8EE0026C383 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B64AF521227CDEBE0026C383 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = AlienSticker/WebP.framework; sourceTree = "<group>"; };
+		B64AF523227CE2620026C383 /* YYAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnimatedImageView.h; sourceTree = "<group>"; };
+		B64AF524227CE2620026C383 /* YYImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCoder.m; sourceTree = "<group>"; };
+		B64AF525227CE2620026C383 /* YYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImage.h; sourceTree = "<group>"; };
+		B64AF526227CE2620026C383 /* YYSpriteSheetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSpriteSheetImage.m; sourceTree = "<group>"; };
+		B64AF527227CE2630026C383 /* YYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImage.m; sourceTree = "<group>"; };
+		B64AF528227CE2630026C383 /* YYFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFrameImage.m; sourceTree = "<group>"; };
+		B64AF529227CE2630026C383 /* YYAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAnimatedImageView.m; sourceTree = "<group>"; };
+		B64AF52A227CE2630026C383 /* YYFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFrameImage.h; sourceTree = "<group>"; };
+		B64AF52B227CE2630026C383 /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSpriteSheetImage.h; sourceTree = "<group>"; };
+		B64AF52C227CE2630026C383 /* YYImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCoder.h; sourceTree = "<group>"; };
+		B6680116227B7BAA000F8523 /* StickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerView.swift; sourceTree = "<group>"; };
+		B6680118227B967C000F8523 /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		B668011B227B96A6000F8523 /* AppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		B668011F227BA42B000F8523 /* StickerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerStore.swift; sourceTree = "<group>"; };
+		B6680121227BA5B2000F8523 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		B6680123227BA5DD000F8523 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		B6680125227BA6F5000F8523 /* StickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCell.swift; sourceTree = "<group>"; };
+		B6680128227BAF6F000F8523 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		B668012A227BB0F8000F8523 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		B668012D227BB255000F8523 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B668012F227C2113000F8523 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		B6680131227C45F1000F8523 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		B6680134227C4DBA000F8523 /* impressum.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = impressum.html; sourceTree = "<group>"; };
+		B6680136227C5071000F8523 /* datenschutz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = datenschutz.html; sourceTree = "<group>"; };
+		B6680138227C5077000F8523 /* lizenzen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lizenzen.html; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D05F631DD8F61A74A234122 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60821A1227B2BB600EE9F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64AF53A227CE3000026C383 /* libz.tbd in Frameworks */,
+				B64AF539227CE2F90026C383 /* MobileCoreServices.framework in Frameworks */,
+				B64AF538227CE2EF0026C383 /* Accelerate.framework in Frameworks */,
+				B64AF537227CE2E80026C383 /* ImageIO.framework in Frameworks */,
+				B64AF536227CE2E00026C383 /* AssetsLibrary.framework in Frameworks */,
+				B64AF535227CE2DA0026C383 /* QuartzCore.framework in Frameworks */,
+				B64AF534227CE2D30026C383 /* CoreFoundation.framework in Frameworks */,
+				B64AF533227CE2C90026C383 /* UIKit.framework in Frameworks */,
+				B64AF532227CE2750026C383 /* WebP.framework in Frameworks */,
+				B6680130227C2113000F8523 /* StoreKit.framework in Frameworks */,
+				B668012E227BB255000F8523 /* WebKit.framework in Frameworks */,
+				A7E080C600501B3CD54012B4 /* Pods_AlienSticker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7E461E2ADAD76F6DE1F7C296 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				122AC5C5A32F3E252198C07A /* Pods-AlienSticker.debug.xcconfig */,
+				8CF607E243E1F5BFCC752FA8 /* Pods-AlienSticker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B608219B227B2BB600EE9F66 = {
+			isa = PBXGroup;
+			children = (
+				B60821A6227B2BB600EE9F66 /* AlienSticker */,
+				B64AF4C2227C9A760026C383 /* iMessageExtension */,
+				B60821A5227B2BB600EE9F66 /* Products */,
+				B668012C227BB255000F8523 /* Frameworks */,
+				7E461E2ADAD76F6DE1F7C296 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B60821A5227B2BB600EE9F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B60821A4227B2BB600EE9F66 /* AlienSticker.app */,
+				B64AF4C1227C9A760026C383 /* iMessageExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B60821A6227B2BB600EE9F66 /* AlienSticker */ = {
+			isa = PBXGroup;
+			children = (
+				B64AF4CD227CC5FB0026C383 /* Dependencies */,
+				B6680133227C4D9D000F8523 /* Resourcen */,
+				B668011E227B9A09000F8523 /* Application */,
+				B6680127227BAF4E000F8523 /* Menu */,
+				B668011D227B99FE000F8523 /* Stickers */,
+				B668011A227B9681000F8523 /* AppPackages */,
+			);
+			path = AlienSticker;
+			sourceTree = "<group>";
+		};
+		B64AF4C2227C9A760026C383 /* iMessageExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B64AF4C3227C9A780026C383 /* Stickers.xcassets */,
+				B64AF4C5227C9A780026C383 /* Info.plist */,
+			);
+			path = iMessageExtension;
+			sourceTree = "<group>";
+		};
+		B64AF4CD227CC5FB0026C383 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				B64AF523227CE2620026C383 /* YYAnimatedImageView.h */,
+				B64AF529227CE2630026C383 /* YYAnimatedImageView.m */,
+				B64AF52A227CE2630026C383 /* YYFrameImage.h */,
+				B64AF528227CE2630026C383 /* YYFrameImage.m */,
+				B64AF525227CE2620026C383 /* YYImage.h */,
+				B64AF527227CE2630026C383 /* YYImage.m */,
+				B64AF52C227CE2630026C383 /* YYImageCoder.h */,
+				B64AF524227CE2620026C383 /* YYImageCoder.m */,
+				B64AF52B227CE2630026C383 /* YYSpriteSheetImage.h */,
+				B64AF526227CE2620026C383 /* YYSpriteSheetImage.m */,
+				B64AF4D2227CC6C70026C383 /* ImageData.swift */,
+				B64AF4D7227CC6C70026C383 /* Interoperability.swift */,
+				B64AF4D0227CC6C70026C383 /* Limits.swift */,
+				B64AF4D6227CC6C70026C383 /* Sticker.swift */,
+				B64AF4D5227CC6C70026C383 /* StickerPack.swift */,
+				B64AF4CF227CC6C70026C383 /* StickerPackManager.swift */,
+				B64AF4D4227CC6C70026C383 /* WebPManager.swift */,
+				B64AF4CE227CC6C60026C383 /* AlienSticker-Bridging-Header.h */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		B668011A227B9681000F8523 /* AppPackages */ = {
+			isa = PBXGroup;
+			children = (
+				B60821B9227B2F5500EE9F66 /* AppListView.swift */,
+				B6680118227B967C000F8523 /* AppStore.swift */,
+				B668011B227B96A6000F8523 /* AppCell.swift */,
+			);
+			path = AppPackages;
+			sourceTree = "<group>";
+		};
+		B668011D227B99FE000F8523 /* Stickers */ = {
+			isa = PBXGroup;
+			children = (
+				B6680116227B7BAA000F8523 /* StickerView.swift */,
+				B668011F227BA42B000F8523 /* StickerStore.swift */,
+				B6680125227BA6F5000F8523 /* StickerCell.swift */,
+			);
+			path = Stickers;
+			sourceTree = "<group>";
+		};
+		B668011E227B9A09000F8523 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B60821A7227B2BB600EE9F66 /* AppDelegate.swift */,
+				B6680121227BA5B2000F8523 /* NavigationController.swift */,
+				B6680123227BA5DD000F8523 /* TabBarController.swift */,
+				B60821AB227B2BB600EE9F66 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B6680127227BAF4E000F8523 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B6680131227C45F1000F8523 /* WebView.swift */,
+				B6680128227BAF6F000F8523 /* MenuView.swift */,
+				B668012A227BB0F8000F8523 /* MenuCell.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		B668012C227BB255000F8523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B64AF521227CDEBE0026C383 /* WebP.framework */,
+				B64AF51B227CD8EE0026C383 /* Foundation.framework */,
+				B64AF514227CD4A20026C383 /* libz.tbd */,
+				B64AF512227CD4910026C383 /* MobileCoreServices.framework */,
+				B64AF510227CD48A0026C383 /* Accelerate.framework */,
+				B64AF50E227CD4810026C383 /* ImageIO.framework */,
+				B64AF50C227CD4790026C383 /* AssetsLibrary.framework */,
+				B64AF50A227CD4720026C383 /* QuartzCore.framework */,
+				B64AF508227CD46B0026C383 /* CoreFoundation.framework */,
+				B64AF506227CD4630026C383 /* UIKit.framework */,
+				B64AF4EF227CC6FC0026C383 /* WebP.framework */,
+				B64AF501227CD2CC0026C383 /* WebP.framework */,
+				B668012F227C2113000F8523 /* StoreKit.framework */,
+				B668012D227BB255000F8523 /* WebKit.framework */,
+				908C99ADC41F25CFC0229805 /* Pods_AlienSticker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6680133227C4D9D000F8523 /* Resourcen */ = {
+			isa = PBXGroup;
+			children = (
+				B60821B0227B2BB800EE9F66 /* LaunchScreen.storyboard */,
+				B6680134227C4DBA000F8523 /* impressum.html */,
+				B6680136227C5071000F8523 /* datenschutz.html */,
+				B6680138227C5077000F8523 /* lizenzen.html */,
+				B64AF4F1227CC83A0026C383 /* pack.png */,
+				B60821AE227B2BB800EE9F66 /* Assets.xcassets */,
+				B60821B3227B2BB800EE9F66 /* Info.plist */,
+			);
+			path = Resourcen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B60821A3227B2BB600EE9F66 /* AlienSticker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B60821B6227B2BB800EE9F66 /* Build configuration list for PBXNativeTarget "AlienSticker" */;
+			buildPhases = (
+				050A62789F516733C28ACB61 /* [CP] Check Pods Manifest.lock */,
+				B60821A0227B2BB600EE9F66 /* Sources */,
+				B60821A1227B2BB600EE9F66 /* Frameworks */,
+				B60821A2227B2BB600EE9F66 /* Resources */,
+				B64AF4CC227C9A780026C383 /* Embed App Extensions */,
+				6247794D02B3F4BC5A6BEBB8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B64AF4C7227C9A780026C383 /* PBXTargetDependency */,
+			);
+			name = AlienSticker;
+			productName = AlienSticker;
+			productReference = B60821A4227B2BB600EE9F66 /* AlienSticker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B64AF4C0227C9A760026C383 /* iMessageExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B64AF4CB227C9A780026C383 /* Build configuration list for PBXNativeTarget "iMessageExtension" */;
+			buildPhases = (
+				B64AF4BF227C9A760026C383 /* Resources */,
+				1D05F631DD8F61A74A234122 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iMessageExtension;
+			productName = iMessageExtension;
+			productReference = B64AF4C1227C9A760026C383 /* iMessageExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B608219C227B2BB600EE9F66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = ATINO;
+				TargetAttributes = {
+					B60821A3227B2BB600EE9F66 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					B64AF4C0227C9A760026C383 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B608219F227B2BB600EE9F66 /* Build configuration list for PBXProject "AlienSticker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B608219B227B2BB600EE9F66;
+			productRefGroup = B60821A5227B2BB600EE9F66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B60821A3227B2BB600EE9F66 /* AlienSticker */,
+				B64AF4C0227C9A760026C383 /* iMessageExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B60821A2227B2BB600EE9F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B60821B2227B2BB800EE9F66 /* LaunchScreen.storyboard in Resources */,
+				B6680139227C5077000F8523 /* lizenzen.html in Resources */,
+				B60821AF227B2BB800EE9F66 /* Assets.xcassets in Resources */,
+				B6680137227C5071000F8523 /* datenschutz.html in Resources */,
+				B64AF4F2227CC83A0026C383 /* pack.png in Resources */,
+				B6680135227C4DBA000F8523 /* impressum.html in Resources */,
+				B60821AD227B2BB600EE9F66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B64AF4BF227C9A760026C383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64AF4C4227C9A780026C383 /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		050A62789F516733C28ACB61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlienSticker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6247794D02B3F4BC5A6BEBB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlienSticker/Pods-AlienSticker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlienSticker/Pods-AlienSticker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlienSticker/Pods-AlienSticker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B60821A0227B2BB600EE9F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64AF4E1227CC6C90026C383 /* StickerPackManager.swift in Sources */,
+				B668011C227B96A6000F8523 /* AppCell.swift in Sources */,
+				B6680124227BA5DD000F8523 /* TabBarController.swift in Sources */,
+				B64AF531227CE2630026C383 /* YYAnimatedImageView.m in Sources */,
+				B64AF4E8227CC6C90026C383 /* Interoperability.swift in Sources */,
+				B64AF4E2227CC6C90026C383 /* Limits.swift in Sources */,
+				B64AF530227CE2630026C383 /* YYFrameImage.m in Sources */,
+				B60821BA227B2F5500EE9F66 /* AppListView.swift in Sources */,
+				B60821A8227B2BB600EE9F66 /* AppDelegate.swift in Sources */,
+				B6680117227B7BAA000F8523 /* StickerView.swift in Sources */,
+				B668012B227BB0F8000F8523 /* MenuCell.swift in Sources */,
+				B64AF4E3227CC6C90026C383 /* ImageData.swift in Sources */,
+				B6680129227BAF6F000F8523 /* MenuView.swift in Sources */,
+				B64AF52F227CE2630026C383 /* YYImage.m in Sources */,
+				B6680119227B967C000F8523 /* AppStore.swift in Sources */,
+				B64AF4E6227CC6C90026C383 /* StickerPack.swift in Sources */,
+				B6680122227BA5B2000F8523 /* NavigationController.swift in Sources */,
+				B6680132227C45F1000F8523 /* WebView.swift in Sources */,
+				B64AF52E227CE2630026C383 /* YYSpriteSheetImage.m in Sources */,
+				B64AF4E7227CC6C90026C383 /* Sticker.swift in Sources */,
+				B6680126227BA6F5000F8523 /* StickerCell.swift in Sources */,
+				B6680120227BA42B000F8523 /* StickerStore.swift in Sources */,
+				B64AF4E5227CC6C90026C383 /* WebPManager.swift in Sources */,
+				B64AF52D227CE2630026C383 /* YYImageCoder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B64AF4C7227C9A780026C383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B64AF4C0227C9A760026C383 /* iMessageExtension */;
+			targetProxy = B64AF4C6227C9A780026C383 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B60821AB227B2BB600EE9F66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60821AC227B2BB600EE9F66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B60821B0227B2BB800EE9F66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B60821B1227B2BB800EE9F66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B60821B4227B2BB800EE9F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B60821B5227B2BB800EE9F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B60821B7227B2BB800EE9F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 122AC5C5A32F3E252198C07A /* Pods-AlienSticker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AXLC3PQNC8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlienSticker/Dependencies",
+					"$(PROJECT_DIR)/AlienSticker",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/AlienSticker/Resourcen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlienSticker/Dependencies/AlienSticker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B60821B8227B2BB800EE9F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CF607E243E1F5BFCC752FA8 /* Pods-AlienSticker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AXLC3PQNC8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlienSticker/Dependencies",
+					"$(PROJECT_DIR)/AlienSticker",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/AlienSticker/Resourcen/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlienSticker/Dependencies/AlienSticker-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B64AF4C9227C9A780026C383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AXLC3PQNC8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlienSticker/Dependencies",
+				);
+				INFOPLIST_FILE = iMessageExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker.iMessageExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B64AF4CA227C9A780026C383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AXLC3PQNC8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AlienSticker/Dependencies",
+				);
+				INFOPLIST_FILE = iMessageExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker.iMessageExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B608219F227B2BB600EE9F66 /* Build configuration list for PBXProject "AlienSticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60821B4227B2BB800EE9F66 /* Debug */,
+				B60821B5227B2BB800EE9F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B60821B6227B2BB800EE9F66 /* Build configuration list for PBXNativeTarget "AlienSticker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B60821B7227B2BB800EE9F66 /* Debug */,
+				B60821B8227B2BB800EE9F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B64AF4CB227C9A780026C383 /* Build configuration list for PBXNativeTarget "iMessageExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64AF4C9227C9A780026C383 /* Debug */,
+				B64AF4CA227C9A780026C383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B608219C227B2BB600EE9F66 /* Project object */;
+}
