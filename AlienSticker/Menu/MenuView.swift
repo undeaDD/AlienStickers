@@ -4,30 +4,30 @@ import MessageUI
 import SwiftMessages
 
 class MenuViewController: UIViewController {
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         definesPresentationContext = true
     }
-    
+
 }
 
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
-    
+
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -36,16 +36,16 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
             return "Informationen"
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as? MenuCell else {
-            fatalError()
+            fatalError("invalid cell dequeued")
         }
-        
+
         switch (indexPath.section, indexPath.row) {
         case (0, 1):
             cell.setUp("protection", "Datenschutz")
@@ -60,10 +60,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
         default:
             cell.setUp("book", "Impressum")
         }
-        
+
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
         case (1, 0):
@@ -78,7 +78,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
             present(mail, animated: true)
         case (1, 2):
             guard MFMailComposeViewController.canSendMail() else { noMailAccount(); return }
-            
+
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setSubject("[AlienSticker] Sticker Wunsch")
@@ -90,11 +90,9 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let webView = segue.destination as? WebView {
-            webView.type = sender as? WebView.WebType ?? .impressum
-        }
+        (segue.destination as? WebView)?.type = (sender as? WebView.WebType) ?? .impressum
     }
-        
+
     private func noMailAccount() {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureContent(title: "Fehler", body: "Kein Email Account eingerichtet")
@@ -104,18 +102,18 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
         view.configureDropShadow()
         view.backgroundView.backgroundColor = .red
         view.button?.isHidden = true
-        
+
         var config = SwiftMessages.Config()
         config.presentationStyle = .bottom
         config.preferredStatusBarStyle = .lightContent
         config.presentationContext = .window(windowLevel: .statusBar)
-        
+
         SwiftMessages.hideAll()
         SwiftMessages.show(config: config, view: view)
     }
-    
+
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
     }
-    
+
 }

@@ -14,6 +14,7 @@
 		B69E80592280331100D589DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69E80582280331000D589DB /* StoreKit.framework */; };
 		B69E805B2280366800D589DB /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */; };
 		B69E805C2280437400D589DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC082280264C0089C209 /* Assets.xcassets */; };
+		B69E8060228061BE00D589DB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B69E805F228061BE00D589DB /* .swiftlint.yml */; };
 		B6D7DC362280264C0089C209 /* lizenzen.html in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC072280264C0089C209 /* lizenzen.html */; };
 		B6D7DC372280264C0089C209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC082280264C0089C209 /* Assets.xcassets */; };
 		B6D7DC382280264C0089C209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC0A2280264C0089C209 /* LaunchScreen.storyboard */; };
@@ -79,6 +80,7 @@
 		B69E8056228032F100D589DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B69E80582280331000D589DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
+		B69E805F228061BE00D589DB /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B6D7DC072280264C0089C209 /* lizenzen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lizenzen.html; sourceTree = "<group>"; };
 		B6D7DC082280264C0089C209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D7DC0B2280264C0089C209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		B608219B227B2BB600EE9F66 = {
 			isa = PBXGroup;
 			children = (
+				B69E805F228061BE00D589DB /* .swiftlint.yml */,
 				B60821A6227B2BB600EE9F66 /* AlienSticker */,
 				B683656922802B6200B0F9C8 /* iMessageSticker */,
 				B60821A5227B2BB600EE9F66 /* Products */,
@@ -253,6 +256,7 @@
 				B6D7DC7D22802A3B0089C209 /* Sticker.swift */,
 				B6D7DC7822802A3A0089C209 /* StickerPack.swift */,
 				B6D7DC7B22802A3B0089C209 /* StickerPackManager.swift */,
+				B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */,
 				B6D7DC7E22802A3B0089C209 /* WebPManager.swift */,
 				B6D7DC5C228029270089C209 /* YYAnimatedImageView.h */,
 				B6D7DC5B228029260089C209 /* YYAnimatedImageView.m */,
@@ -294,7 +298,6 @@
 			children = (
 				B6D7DC312280264C0089C209 /* Main.storyboard */,
 				B6D7DC062280264C0089C209 /* Resourcen */,
-				B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */,
 				B6D7DC342280264C0089C209 /* NavigationController.swift */,
 				B6D7DC352280264C0089C209 /* TabBarController.swift */,
 				B6D7DC332280264C0089C209 /* AppDelegate.swift */,
@@ -313,6 +316,7 @@
 				B60821A0227B2BB600EE9F66 /* Sources */,
 				B60821A1227B2BB600EE9F66 /* Frameworks */,
 				B60821A2227B2BB600EE9F66 /* Resources */,
+				B69E805E2280608A00D589DB /* ShellScript */,
 				011D022B6825AF728AD22CC1 /* [CP] Embed Pods Frameworks */,
 				B683657322802B6400B0F9C8 /* Embed App Extensions */,
 			);
@@ -384,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B69E8060228061BE00D589DB /* .swiftlint.yml in Resources */,
 				B6D7DC382280264C0089C209 /* LaunchScreen.storyboard in Resources */,
 				B6D7DC3A2280264C0089C209 /* pack.png in Resources */,
 				B6D7DC3B2280264C0089C209 /* datenschutz.html in Resources */,
@@ -421,6 +426,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlienSticker/Pods-AlienSticker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		B69E805E2280608A00D589DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n\n";
 		};
 		F99841EE136C2C4FDBEDF529 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

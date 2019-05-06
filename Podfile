@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'AlienSticker' do
   pod 'SwiftMessages'
+  pod 'SwiftLint'
 end

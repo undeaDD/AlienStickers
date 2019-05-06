@@ -13,15 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension UIImage {
     func withBackground(_ color: UIColor) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height)
-        
+
         UIGraphicsBeginImageContextWithOptions(rect.size, true, 0)
         color.setFill()
         UIRectFill(rect)
-        
+
         self.draw(at: .zero)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        
+
         return image
     }
 }
