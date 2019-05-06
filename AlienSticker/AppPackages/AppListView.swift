@@ -3,7 +3,7 @@ import UIKit
 class AppListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private var data: [AppStore.App] = AppStore.getData()
+    private var data = AppStore.getData()
     
     override func viewDidLoad() {
         super.viewDidLoad()

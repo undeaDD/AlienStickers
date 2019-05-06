@@ -1,7 +1,7 @@
 import UIKit
 import StoreKit
 
-class AppCell: UITableViewCell {
+class AppCell: UITableViewCell, SKStoreProductViewControllerDelegate {
     
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -20,38 +20,40 @@ class AppCell: UITableViewCell {
         installButton.layer.borderWidth = 1
         installButton.layer.borderColor = UIColor.white.cgColor
         installButton.layer.cornerRadius = 5
-        installButton.isHidden = true
         
-        if let enabled = item.isEnabled {
+        switch item.state {
+        case .enabled:
             installButton.isHidden = false
-            installButton.setTitle(enabled ? "Hinzufügen" : "AppStore", for: .normal)
-            descriptionLabel.alpha = enabled ? 1.0 : 0.5
-            iconView.alpha = enabled ? 1.0 : 0.5
-            self.url = enabled ? item.url : item.storeId
-        } else if item.title == "iMessage" {
+            installButton.setTitle("Hinzufügen", for: .normal)
             descriptionLabel.alpha = 1.0
             iconView.alpha = 1.0
-        } else {
+            self.url = item.url
+        case .enabledButNotInstalled:
+            installButton.isHidden = false
+            installButton.setTitle("AppStore", for: .normal)
             descriptionLabel.alpha = 0.5
             iconView.alpha = 0.5
+            self.url = item.storeId
+        case .disabled:
+            installButton.isHidden = true
+            descriptionLabel.alpha = 0.5
+            iconView.alpha = 0.5
+        case .iMessage:
+            installButton.isHidden = true
+            descriptionLabel.alpha = 1.0
+            iconView.alpha = 1.0
         }
     }
     
     @IBAction func installPack(_ sender: UIButton) {
         if self.url == "whatsapp://" {
-            if let stickerPack = try? StickerPack(identifier: "de.atino.AlienSticker", name: "AlienSticker", publisher: "DeltaSiege.eu", trayImageFileName: "pack.png", publisherWebsite: "https://www.deltasiege.eu", privacyPolicyWebsite: nil, licenseAgreementWebsite: nil) {
-                
-                for (data, emojis) in StickerStore.getWhatsappPack() {
-                    do {
-                        try stickerPack.addSticker(imageData: UIImage(named: data)!.pngData()!, type: .png, emojis: emojis)
-                    } catch let error { print(error.localizedDescription) }
-                }
-                
-                stickerPack.sendToWhatsApp { _ in }
-            }
+            // Whatsapp specific Code
+            StickerStore.openWhatsappPack()
         } else if let url = URL(string: self.url), UIApplication.shared.canOpenURL(url) {
+            // Try to open urlscheme
             UIApplication.shared.open(url)
         } else {
+            // Download App from the Appstore
             let vc = SKStoreProductViewController()
             vc.delegate = self
             vc.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: self.url], completionBlock: nil)
@@ -61,12 +63,8 @@ class AppCell: UITableViewCell {
         }
     }
     
-}
-
-extension AppCell: SKStoreProductViewControllerDelegate {
-    
     func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
         viewController.dismiss(animated: true)
     }
-    
+
 }

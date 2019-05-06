@@ -8,14 +8,14 @@ class StickerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
+
 }
 
-extension StickerViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension StickerViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, StickerCellDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -48,57 +48,37 @@ extension StickerViewController: UICollectionViewDelegateFlowLayout, UICollectio
         }
         
         let item = self.data[indexPath.row]
+        cell.delegate = self
         cell.setUp(item)
         
         return cell
     }
+
+    func openShareSheet(_ activityViewController: UIActivityViewController) {
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if StickerStore.mode {
-            if let sticker = UIImage(named: "Sticker_\(indexPath.row)")?.withBackground(.black) {
-                UIPasteboard.general.image = sticker
-                let view = MessageView.viewFromNib(layout: .cardView)
-                view.configureContent(title: "Erfolgreich kopiert", body: "Der Sticker wurde in die Zwischenablage gelegt")
-                view.layoutMarginAdditions = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-                (view.backgroundView as? CornerRoundingView)?.cornerRadius = 16
-                view.configureTheme(.success)
-                view.configureDropShadow()
-                view.button?.isHidden = true
-                
-                var config = SwiftMessages.Config()
-                config.presentationStyle = .bottom
-                config.preferredStatusBarStyle = .lightContent
-                config.presentationContext = .window(windowLevel: .statusBar)
-                
-                SwiftMessages.hideAll()
-                SwiftMessages.show(config: config, view: view)
-                return
-            }
-        } else {
-            if let sticker = UIImage(named: "Sticker_\(indexPath.row)")?.withBackground(.black) {
-                let activityViewController = UIActivityViewController(activityItems: [sticker], applicationActivities: nil)
-                activityViewController.popoverPresentationController?.sourceView = self.view
-                self.present(activityViewController, animated: true)
-                return
-            }
+        if let cell = collectionView.cellForItem(at: indexPath) as? StickerCell, let sticker = cell.iconView.image?.withBackground(.black) {
+            UIPasteboard.general.image = sticker
+            
+            let view = MessageView.viewFromNib(layout: .cardView)
+            view.configureContent(title: "Erfolgreich kopiert", body: "Der Sticker wurde in die Zwischenablage gelegt")
+            view.layoutMarginAdditions = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
+            (view.backgroundView as? CornerRoundingView)?.cornerRadius = 16
+            view.configureTheme(.success)
+            view.configureDropShadow()
+            view.button?.isHidden = true
+            
+            var config = SwiftMessages.Config()
+            config.presentationStyle = .bottom
+            config.preferredStatusBarStyle = .lightContent
+            config.presentationContext = .window(windowLevel: .statusBar)
+            
+            SwiftMessages.hideAll()
+            SwiftMessages.show(config: config, view: view)
         }
-        
-        let view = MessageView.viewFromNib(layout: .cardView)
-        view.configureContent(title: "Fehler beim Kopieren", body: "Beim Kopieren des Stickers ist ein unbekannter Fehler aufgetreten.")
-        view.layoutMarginAdditions = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        (view.backgroundView as? CornerRoundingView)?.cornerRadius = 16
-        view.configureTheme(.error)
-        view.backgroundView.backgroundColor = .red
-        view.configureDropShadow()
-        view.button?.isHidden = true
-        
-        var config = SwiftMessages.Config()
-        config.presentationStyle = .bottom
-        config.preferredStatusBarStyle = .lightContent
-        config.presentationContext = .window(windowLevel: .statusBar)
-        
-        SwiftMessages.hideAll()
-        SwiftMessages.show(config: config, view: view)
     }
     
 }

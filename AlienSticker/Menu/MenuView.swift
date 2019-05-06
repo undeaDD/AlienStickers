@@ -13,33 +13,27 @@ class MenuViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        definesPresentationContext = true
     }
     
 }
 
-extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
+extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        default:
-            return 3
-        }
+        return 3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "  Einstellungen"
-        case 1:
-            return "  Rechtliches"
+            return "Rechtliches"
         default:
-            return "  Informationen"
+            return "Informationen"
         }
     }
     
@@ -53,26 +47,18 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         switch (indexPath.section, indexPath.row) {
-        case (0, 0):
-            guard let modeCell = tableView.dequeueReusableCell(withIdentifier: "modeCell") as? ModeCell else {
-                fatalError()
-            }
-            modeCell.setUp()
-            return modeCell
-        case (1, 0):
-            cell.setUp("book", "Impressum")
-        case (1, 1):
+        case (0, 1):
             cell.setUp("protection", "Datenschutz")
-        case (1, 2):
+        case (0, 2):
             cell.setUp("license", "Lizenzen")
-        case (2, 0):
+        case (1, 0):
             cell.setUp("rate", "App Bewerten")
-        case (2, 1):
+        case (1, 1):
             cell.setUp("feedback", "Feedback geben")
-        case (2, 2):
+        case (1, 2):
             cell.setUp("request", "Sticker wünschen")
         default:
-            fatalError()
+            cell.setUp("book", "Impressum")
         }
         
         return cell
@@ -80,47 +66,35 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
-        case (1, 3):
+        case (1, 0):
             SKStoreReviewController.requestReview()
-        case (1, 4):
-            guard MFMailComposeViewController.canSendMail() else {
-                noMailAccount()
-                return
-            }
+        case (1, 1):
+            guard MFMailComposeViewController.canSendMail() else { noMailAccount(); return }
 
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setSubject("[AlienSticker] Feedback")
             mail.setToRecipients(["dominic.drees@atino.de"])
             present(mail, animated: true)
-        case (1, 5):
-            guard MFMailComposeViewController.canSendMail() else {
-                noMailAccount()
-                return
-            }
-
+        case (1, 2):
+            guard MFMailComposeViewController.canSendMail() else { noMailAccount(); return }
+            
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
             mail.setSubject("[AlienSticker] Sticker Wunsch")
             mail.setToRecipients(["dominic.drees@atino.de"])
             present(mail, animated: true)
-        case (1, let index):
-            performSegue(withIdentifier: "showWebView", sender: index)
-        default:
-            return
+        case (_, let index):
+            performSegue(withIdentifier: "showWebView", sender: WebView.WebType.fromInt(index))
         }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let webView = segue.destination as? WebView {
-            webView.type = sender as? Int
+            webView.type = sender as? WebView.WebType ?? .impressum
         }
     }
-    
-}
-
-extension MenuViewController: MFMailComposeViewControllerDelegate {
-    
+        
     private func noMailAccount() {
         let view = MessageView.viewFromNib(layout: .cardView)
         view.configureContent(title: "Fehler", body: "Kein Email Account eingerichtet")

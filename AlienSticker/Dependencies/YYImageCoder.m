@@ -2792,6 +2792,8 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
     objc_setAssociatedObject(self, @selector(yy_isDecodedForDisplay), @(isDecodedForDisplay), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)yy_saveToAlbumWithCompletionBlock:(void(^)(NSURL *assetURL, NSError *error))completionBlock {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data = [self _yy_dataRepresentationForSystem:YES];
@@ -2808,6 +2810,7 @@ CGImageRef YYCGImageCreateWithWebPData(CFDataRef webpData,
         }];
     });
 }
+#pragma clang diagnostic pop
 
 - (NSData *)yy_imageDataRepresentation {
     return [self _yy_dataRepresentationForSystem:NO];

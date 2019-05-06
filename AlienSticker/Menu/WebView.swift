@@ -3,30 +3,25 @@ import WebKit
 
 class WebView: UIViewController {
     
+    enum WebType: String {
+        case impressum = "Impressum"
+        case lizenzen = "Lizenzen"
+        case datenschutz = "Datenschutz"
+        
+        public static func fromInt(_ integer: Int) -> WebType {
+            return integer == 2 ? .lizenzen : integer == 1 ? .datenschutz : .impressum
+        }
+    }
+    
     @IBOutlet weak var webView: WKWebView!
-    var type: Int?
+    var type: WebType = .impressum
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        switch type ?? 0 {
-        case 0:
-            navigationItem.title = "Impressum"
-            if let url = Bundle.main.url(forResource: "impressum", withExtension: "html") {
-                webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
-            }
-        case 1:
-            navigationItem.title = "Datenschutz"
-            if let url = Bundle.main.url(forResource: "datenschutz", withExtension: "html") {
-                webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
-            }
-        case 2:
-            navigationItem.title = "Lizenzen"
-            if let url = Bundle.main.url(forResource: "lizenzen", withExtension: "html") {
-                webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
-            }
-        default:
-            fatalError()
+        navigationItem.title = type.rawValue
+        if let url = Bundle.main.url(forResource: type.rawValue.lowercased(), withExtension: "html") {
+            webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         }
     }
     

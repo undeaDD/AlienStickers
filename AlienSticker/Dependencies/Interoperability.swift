@@ -13,10 +13,10 @@ struct Interoperability {
     private static let PasteboardExpirationSeconds: TimeInterval = 60
     private static let PasteboardStickerPackDataType: String = "net.whatsapp.third-party.sticker-pack"
     private static let WhatsAppURL: URL = URL(string: "whatsapp://stickerPack")!
-
+    
     static var iOSAppStoreLink: String?
     static var AndroidStoreLink: String?
-
+    
     static func canSend() -> Bool {
         return UIApplication.shared.canOpenURL(URL(string: "whatsapp://")!)
     }
@@ -27,13 +27,13 @@ struct Interoperability {
                 fatalError("Your bundle identifier must not include the default one.");
             }
         }
-
+        
         let pasteboard: UIPasteboard = UIPasteboard.general
-
+        
         var jsonWithAppStoreLink: [String: Any] = json
         jsonWithAppStoreLink["ios_app_store_link"] = iOSAppStoreLink
         jsonWithAppStoreLink["android_play_store_link"] = AndroidStoreLink
-
+        
         guard let dataToSend = try? JSONSerialization.data(withJSONObject: jsonWithAppStoreLink, options: []) else {
             return false
         }
@@ -53,7 +53,7 @@ struct Interoperability {
         }
         return true
     }
-
+    
     static func copyImageToPasteboard(image: UIImage) {
         UIPasteboard.general.image = image
     }
