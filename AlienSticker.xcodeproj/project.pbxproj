@@ -664,7 +664,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.deltasiege.AlienSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AlienSticker/Dependencies/AlienSticker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -689,7 +689,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.deltasiege.AlienSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AlienSticker/Dependencies/AlienSticker-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -705,7 +705,7 @@
 				DEVELOPMENT_TEAM = AXLC3PQNC8;
 				INFOPLIST_FILE = iMessageSticker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker.iMessageSticker;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.deltasiege.AlienSticker.iMessageSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -720,7 +720,7 @@
 				DEVELOPMENT_TEAM = AXLC3PQNC8;
 				INFOPLIST_FILE = iMessageSticker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = de.atino.AlienSticker.iMessageSticker;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.deltasiege.AlienSticker.iMessageSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
