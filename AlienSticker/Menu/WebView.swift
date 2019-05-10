@@ -7,9 +7,19 @@ class WebView: UIViewController {
         case impressum = "Impressum"
         case lizenzen = "Lizenzen"
         case datenschutz = "Datenschutz"
+        case contact = "Kontakt"
 
         public static func fromInt(_ integer: Int) -> WebType {
-            return integer == 2 ? .lizenzen : integer == 1 ? .datenschutz : .impressum
+            switch integer {
+            case 1:
+                return .datenschutz
+            case 2:
+                return .lizenzen
+            case 3:
+                return .contact
+            default:
+                return .impressum
+            }
         }
     }
 

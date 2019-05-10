@@ -25,7 +25,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -51,12 +51,16 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
             cell.setUp("protection", "Datenschutz")
         case (0, 2):
             cell.setUp("license", "Lizenzen")
+        case (0, 3):
+            cell.setUp("contact", "Kontakt")
         case (1, 0):
             cell.setUp("rate", "App Bewerten")
         case (1, 1):
             cell.setUp("feedback", "Feedback geben")
         case (1, 2):
             cell.setUp("request", "Sticker wünschen")
+        case (1, 3):
+            cell.setUp("tutorial", "Einführung anzeigen")
         default:
             cell.setUp("book", "Impressum")
         }
@@ -84,6 +88,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
             mail.setSubject("[AlienSticker] Sticker Wunsch")
             mail.setToRecipients(["dominic.drees@atino.de"])
             present(mail, animated: true)
+        case (1, 3):
+            if let initialView = UIStoryboard(name: "Welcome", bundle: nil).instantiateInitialViewController() {
+                UIApplication.shared.delegate?.window??.rootViewController?.present(initialView, animated: true, completion: nil)
+            }
         case (_, let index):
             performSegue(withIdentifier: "showWebView", sender: WebView.WebType.fromInt(index))
         }
