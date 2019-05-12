@@ -33,5 +33,4 @@ opt_in_rules:
  - file_length
 excluded:
  - Pods
- - AlienSticker/Dependencies
 

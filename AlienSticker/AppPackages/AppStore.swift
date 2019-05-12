@@ -5,7 +5,7 @@ class AppStore {
     public static func getData() -> [App] {
         return [
             App("iMessage", "Automatisch aktiviert", "sms://", "000000000", .iMessage),
-            App("Whatsapp", "Version: 1.0.1", "whatsapp://", "310633997", .enabled),
+            App("Whatsapp", "Version: 1.0.1", "whatsapp://stickerPack", "310633997", .enabled),
             App("Telegram", "Version: 1.0.0", "tg://addstickers?set=AlienStickerTest", "686449807", .enabled),
             App("Facebook", "In Planung", "fb://", "284882215", .disabled),
             App("Skype", "In Planung", "skype://", "304878510", .disabled),

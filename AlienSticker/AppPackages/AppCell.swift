@@ -46,7 +46,7 @@ class AppCell: UITableViewCell, SKStoreProductViewControllerDelegate {
     }
 
     @IBAction func installPack(_ sender: UIButton) {
-        if self.url == "whatsapp://" {
+        if self.url == "whatsapp://stickerPack" {
             // Whatsapp specific Code
             StickerStore.openWhatsappPack()
         } else if let url = URL(string: self.url), UIApplication.shared.canOpenURL(url) {

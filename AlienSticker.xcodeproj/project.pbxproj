@@ -12,7 +12,7 @@
 		B66058262285A24400BC655C /* kontakt.html in Resources */ = {isa = PBXBuildFile; fileRef = B66058252285A24400BC655C /* kontakt.html */; };
 		B66058282285A46500BC655C /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66058272285A46500BC655C /* PagingView.swift */; };
 		B683656F22802B6400B0F9C8 /* iMessageSticker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B683656822802B6200B0F9C8 /* iMessageSticker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B69E8055228032C500D589DB /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6D7DC56228026AD0089C209 /* WebP.framework */; };
+		B698EC4C2287FD0C007625F8 /* whatsapp.json in Resources */ = {isa = PBXBuildFile; fileRef = B698EC4B2287FD0C007625F8 /* whatsapp.json */; };
 		B69E8057228032F100D589DB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69E8056228032F100D589DB /* WebKit.framework */; };
 		B69E80592280331100D589DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69E80582280331000D589DB /* StoreKit.framework */; };
 		B69E805B2280366800D589DB /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */; };
@@ -22,7 +22,6 @@
 		B6D7DC372280264C0089C209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC082280264C0089C209 /* Assets.xcassets */; };
 		B6D7DC382280264C0089C209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC0A2280264C0089C209 /* LaunchScreen.storyboard */; };
 		B6D7DC392280264C0089C209 /* impressum.html in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC0C2280264C0089C209 /* impressum.html */; };
-		B6D7DC3A2280264C0089C209 /* pack.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC0D2280264C0089C209 /* pack.png */; };
 		B6D7DC3B2280264C0089C209 /* datenschutz.html in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC0E2280264C0089C209 /* datenschutz.html */; };
 		B6D7DC3D2280264C0089C209 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC112280264C0089C209 /* WebView.swift */; };
 		B6D7DC3E2280264C0089C209 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC122280264C0089C209 /* MenuCell.swift */; };
@@ -37,18 +36,6 @@
 		B6D7DC532280264C0089C209 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC332280264C0089C209 /* AppDelegate.swift */; };
 		B6D7DC542280264C0089C209 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC342280264C0089C209 /* NavigationController.swift */; };
 		B6D7DC552280264C0089C209 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC352280264C0089C209 /* TabBarController.swift */; };
-		B6D7DC62228029280089C209 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC59228029260089C209 /* YYImageCoder.m */; };
-		B6D7DC63228029280089C209 /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC5B228029260089C209 /* YYAnimatedImageView.m */; };
-		B6D7DC64228029280089C209 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC5E228029270089C209 /* YYSpriteSheetImage.m */; };
-		B6D7DC65228029280089C209 /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC5F228029270089C209 /* YYImage.m */; };
-		B6D7DC66228029280089C209 /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC61228029280089C209 /* YYFrameImage.m */; };
-		B6D7DC7F22802A3B0089C209 /* StickerPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7822802A3A0089C209 /* StickerPack.swift */; };
-		B6D7DC8022802A3B0089C209 /* Limits.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7922802A3A0089C209 /* Limits.swift */; };
-		B6D7DC8122802A3B0089C209 /* Interoperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7A22802A3B0089C209 /* Interoperability.swift */; };
-		B6D7DC8222802A3B0089C209 /* StickerPackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7B22802A3B0089C209 /* StickerPackManager.swift */; };
-		B6D7DC8322802A3B0089C209 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7C22802A3B0089C209 /* ImageData.swift */; };
-		B6D7DC8422802A3B0089C209 /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7D22802A3B0089C209 /* Sticker.swift */; };
-		B6D7DC8522802A3B0089C209 /* WebPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7DC7E22802A3B0089C209 /* WebPManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +70,7 @@
 		B66058272285A46500BC655C /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		B683656822802B6200B0F9C8 /* iMessageSticker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageSticker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B683656C22802B6400B0F9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B698EC4B2287FD0C007625F8 /* whatsapp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = whatsapp.json; sourceTree = "<group>"; };
 		B69E8056228032F100D589DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B69E80582280331000D589DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -91,7 +79,6 @@
 		B6D7DC082280264C0089C209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D7DC0B2280264C0089C209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6D7DC0C2280264C0089C209 /* impressum.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = impressum.html; sourceTree = "<group>"; };
-		B6D7DC0D2280264C0089C209 /* pack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pack.png; sourceTree = "<group>"; };
 		B6D7DC0E2280264C0089C209 /* datenschutz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = datenschutz.html; sourceTree = "<group>"; };
 		B6D7DC0F2280264C0089C209 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6D7DC112280264C0089C209 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -107,33 +94,7 @@
 		B6D7DC332280264C0089C209 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6D7DC342280264C0089C209 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B6D7DC352280264C0089C209 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		B6D7DC56228026AD0089C209 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = AlienSticker/WebP.framework; sourceTree = "<group>"; };
-		B6D7DC58228029250089C209 /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYSpriteSheetImage.h; sourceTree = "<group>"; };
-		B6D7DC59228029260089C209 /* YYImageCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImageCoder.m; sourceTree = "<group>"; };
-		B6D7DC5A228029260089C209 /* YYImageCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImageCoder.h; sourceTree = "<group>"; };
-		B6D7DC5B228029260089C209 /* YYAnimatedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYAnimatedImageView.m; sourceTree = "<group>"; };
-		B6D7DC5C228029270089C209 /* YYAnimatedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYAnimatedImageView.h; sourceTree = "<group>"; };
-		B6D7DC5D228029270089C209 /* YYImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYImage.h; sourceTree = "<group>"; };
-		B6D7DC5E228029270089C209 /* YYSpriteSheetImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYSpriteSheetImage.m; sourceTree = "<group>"; };
-		B6D7DC5F228029270089C209 /* YYImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYImage.m; sourceTree = "<group>"; };
-		B6D7DC60228029280089C209 /* YYFrameImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFrameImage.h; sourceTree = "<group>"; };
-		B6D7DC61228029280089C209 /* YYFrameImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFrameImage.m; sourceTree = "<group>"; };
-		B6D7DC67228029790089C209 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		B6D7DC69228029830089C209 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		B6D7DC6B2280298A0089C209 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		B6D7DC6D228029910089C209 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		B6D7DC6F2280299A0089C209 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		B6D7DC71228029A10089C209 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		B6D7DC73228029A90089C209 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		B6D7DC75228029B00089C209 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B6D7DC77228029D90089C209 /* AlienSticker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlienSticker-Bridging-Header.h"; sourceTree = "<group>"; };
-		B6D7DC7822802A3A0089C209 /* StickerPack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPack.swift; sourceTree = "<group>"; };
-		B6D7DC7922802A3A0089C209 /* Limits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Limits.swift; sourceTree = "<group>"; };
-		B6D7DC7A22802A3B0089C209 /* Interoperability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interoperability.swift; sourceTree = "<group>"; };
-		B6D7DC7B22802A3B0089C209 /* StickerPackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerPackManager.swift; sourceTree = "<group>"; };
-		B6D7DC7C22802A3B0089C209 /* ImageData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
-		B6D7DC7D22802A3B0089C209 /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
-		B6D7DC7E22802A3B0089C209 /* WebPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebPManager.swift; sourceTree = "<group>"; };
 		EA8D7BA1E6DF24CA635403EE /* Pods-AlienSticker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlienSticker.debug.xcconfig"; path = "Target Support Files/Pods-AlienSticker/Pods-AlienSticker.debug.xcconfig"; sourceTree = "<group>"; };
 		EF876F4D5C8BECBC74385999 /* Pods_AlienSticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlienSticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,7 +106,6 @@
 			files = (
 				B69E80592280331100D589DB /* StoreKit.framework in Frameworks */,
 				B69E8057228032F100D589DB /* WebKit.framework in Frameworks */,
-				B69E8055228032C500D589DB /* WebP.framework in Frameworks */,
 				3F2595DC03A8AF38438314FB /* Pods_AlienSticker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,15 +134,7 @@
 			children = (
 				B69E80582280331000D589DB /* StoreKit.framework */,
 				B69E8056228032F100D589DB /* WebKit.framework */,
-				B6D7DC67228029790089C209 /* libz.tbd */,
 				B6D7DC75228029B00089C209 /* UIKit.framework */,
-				B6D7DC73228029A90089C209 /* CoreFoundation.framework */,
-				B6D7DC71228029A10089C209 /* QuartzCore.framework */,
-				B6D7DC6F2280299A0089C209 /* AssetsLibrary.framework */,
-				B6D7DC6D228029910089C209 /* ImageIO.framework */,
-				B6D7DC6B2280298A0089C209 /* Accelerate.framework */,
-				B6D7DC69228029830089C209 /* MobileCoreServices.framework */,
-				B6D7DC56228026AD0089C209 /* WebP.framework */,
 				EF876F4D5C8BECBC74385999 /* Pods_AlienSticker.framework */,
 			);
 			name = Frameworks;
@@ -212,7 +164,6 @@
 		B60821A6227B2BB600EE9F66 /* AlienSticker */ = {
 			isa = PBXGroup;
 			children = (
-				B6D7DC142280264C0089C209 /* Dependencies */,
 				B6D7DC302280264C0089C209 /* Application */,
 				B6D7DC2B2280264C0089C209 /* AppPackages */,
 				B6D7DC102280264C0089C209 /* Menu */,
@@ -249,7 +200,7 @@
 				B6D7DC0C2280264C0089C209 /* impressum.html */,
 				B6D7DC0E2280264C0089C209 /* datenschutz.html */,
 				B66058252285A24400BC655C /* kontakt.html */,
-				B6D7DC0D2280264C0089C209 /* pack.png */,
+				B698EC4B2287FD0C007625F8 /* whatsapp.json */,
 			);
 			path = Resourcen;
 			sourceTree = "<group>";
@@ -262,32 +213,6 @@
 				B6D7DC112280264C0089C209 /* WebView.swift */,
 			);
 			path = Menu;
-			sourceTree = "<group>";
-		};
-		B6D7DC142280264C0089C209 /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				B6D7DC7C22802A3B0089C209 /* ImageData.swift */,
-				B6D7DC7A22802A3B0089C209 /* Interoperability.swift */,
-				B6D7DC7922802A3A0089C209 /* Limits.swift */,
-				B6D7DC7D22802A3B0089C209 /* Sticker.swift */,
-				B6D7DC7822802A3A0089C209 /* StickerPack.swift */,
-				B6D7DC7B22802A3B0089C209 /* StickerPackManager.swift */,
-				B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */,
-				B6D7DC7E22802A3B0089C209 /* WebPManager.swift */,
-				B6D7DC5C228029270089C209 /* YYAnimatedImageView.h */,
-				B6D7DC5B228029260089C209 /* YYAnimatedImageView.m */,
-				B6D7DC60228029280089C209 /* YYFrameImage.h */,
-				B6D7DC61228029280089C209 /* YYFrameImage.m */,
-				B6D7DC5D228029270089C209 /* YYImage.h */,
-				B6D7DC5F228029270089C209 /* YYImage.m */,
-				B6D7DC5A228029260089C209 /* YYImageCoder.h */,
-				B6D7DC59228029260089C209 /* YYImageCoder.m */,
-				B6D7DC58228029250089C209 /* YYSpriteSheetImage.h */,
-				B6D7DC5E228029270089C209 /* YYSpriteSheetImage.m */,
-				B6D7DC77228029D90089C209 /* AlienSticker-Bridging-Header.h */,
-			);
-			path = Dependencies;
 			sourceTree = "<group>";
 		};
 		B6D7DC272280264C0089C209 /* Stickers */ = {
@@ -315,6 +240,7 @@
 			children = (
 				B6D7DC062280264C0089C209 /* Resourcen */,
 				B6D7DC312280264C0089C209 /* Main.storyboard */,
+				B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */,
 				B6D7DC342280264C0089C209 /* NavigationController.swift */,
 				B6D7DC352280264C0089C209 /* TabBarController.swift */,
 				B6D7DC332280264C0089C209 /* AppDelegate.swift */,
@@ -405,15 +331,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69E8060228061BE00D589DB /* .swiftlint.yml in Resources */,
-				B6D7DC382280264C0089C209 /* LaunchScreen.storyboard in Resources */,
-				B6D7DC3A2280264C0089C209 /* pack.png in Resources */,
-				B6D7DC3B2280264C0089C209 /* datenschutz.html in Resources */,
 				B6D7DC522280264C0089C209 /* Main.storyboard in Resources */,
-				B66058262285A24400BC655C /* kontakt.html in Resources */,
+				B6D7DC382280264C0089C209 /* LaunchScreen.storyboard in Resources */,
 				B66058242285A0B900BC655C /* Welcome.storyboard in Resources */,
+				B698EC4C2287FD0C007625F8 /* whatsapp.json in Resources */,
+				B69E8060228061BE00D589DB /* .swiftlint.yml in Resources */,
 				B6D7DC372280264C0089C209 /* Assets.xcassets in Resources */,
 				B6D7DC392280264C0089C209 /* impressum.html in Resources */,
+				B6D7DC3B2280264C0089C209 /* datenschutz.html in Resources */,
+				B66058262285A24400BC655C /* kontakt.html in Resources */,
 				B6D7DC362280264C0089C209 /* lizenzen.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,29 +419,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D7DC532280264C0089C209 /* AppDelegate.swift in Sources */,
-				B6D7DC66228029280089C209 /* YYFrameImage.m in Sources */,
 				B6D7DC4E2280264C0089C209 /* StickerCell.swift in Sources */,
-				B6D7DC8122802A3B0089C209 /* Interoperability.swift in Sources */,
 				B66058282285A46500BC655C /* PagingView.swift in Sources */,
-				B6D7DC8222802A3B0089C209 /* StickerPackManager.swift in Sources */,
 				B6D7DC4F2280264C0089C209 /* AppCell.swift in Sources */,
 				B6D7DC502280264C0089C209 /* AppListView.swift in Sources */,
 				B6D7DC552280264C0089C209 /* TabBarController.swift in Sources */,
-				B6D7DC62228029280089C209 /* YYImageCoder.m in Sources */,
 				B6D7DC3E2280264C0089C209 /* MenuCell.swift in Sources */,
 				B6D7DC3F2280264C0089C209 /* MenuView.swift in Sources */,
 				B6D7DC512280264C0089C209 /* AppStore.swift in Sources */,
-				B6D7DC65228029280089C209 /* YYImage.m in Sources */,
-				B6D7DC8522802A3B0089C209 /* WebPManager.swift in Sources */,
-				B6D7DC64228029280089C209 /* YYSpriteSheetImage.m in Sources */,
-				B6D7DC7F22802A3B0089C209 /* StickerPack.swift in Sources */,
-				B6D7DC63228029280089C209 /* YYAnimatedImageView.m in Sources */,
 				B6D7DC542280264C0089C209 /* NavigationController.swift in Sources */,
-				B6D7DC8422802A3B0089C209 /* Sticker.swift in Sources */,
-				B6D7DC8322802A3B0089C209 /* ImageData.swift in Sources */,
 				B6D7DC4D2280264C0089C209 /* StickerStore.swift in Sources */,
 				B6D7DC4C2280264C0089C209 /* StickerView.swift in Sources */,
-				B6D7DC8022802A3B0089C209 /* Limits.swift in Sources */,
 				B69E805B2280366800D589DB /* ForceTouchGestureRecognizer.swift in Sources */,
 				B6D7DC3D2280264C0089C209 /* WebView.swift in Sources */,
 			);
@@ -686,7 +600,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.deltasiege.AlienSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AlienSticker/Dependencies/AlienSticker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -711,7 +625,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = eu.deltasiege.AlienSticker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AlienSticker/Dependencies/AlienSticker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -16,14 +16,7 @@ class PagingViewController: UIPageViewController {
                 break
             }
         }
-        
-        (0...6).forEach {
-            if let page = storyboard?.instantiateViewController(withIdentifier: "page\($0)") {
-                pages.append(page)
-            }
-        }
-    
-        
+
         setViewControllers([pages[0]], direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
         pageControl.numberOfPages = pages.count
         pageControl.currentPage = 0

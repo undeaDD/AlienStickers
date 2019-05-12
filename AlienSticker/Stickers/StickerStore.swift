@@ -2,29 +2,21 @@ import UIKit
 
 class StickerStore {
 
-    static let emojis: [String] = ["😀😊", "😃😇", "😄🙂", "😁🙃", "😆😉", "😅😌", "😂😍", "🤣🥰", "☺️😘", "😀😊", "😃😇", "😄🙂", "😁🙃", "😆😉", "😅😌", "😂😍", "🤣🥰", "☺️😘", "😀😊", "😃😇", "😄🙂", "😁🙃", "😆😉", "😅😌", "😂😍", "🤣🥰", "☺️😘", "😀😊", "😃😇", "😄🙂", "😁🙃", "😆😉", "😅😌", "😂😍", "🤣🥰"]
-
     public class func openWhatsappPack() {
-        if let stickerPack = try? StickerPack(identifier: "de.atino.AlienSticker", name: "AlienSticker", publisher: "ATINO GmbH", trayImageFileName: "pack.png") {
+        if let path = Bundle.main.url(forResource: "whatsapp", withExtension: "json")?.path,
+           let data = try? String(contentsOfFile: path).data(using: .utf8),
+           let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+           let result = try? JSONSerialization.data(withJSONObject: json, options: []) {
 
-            for index in 0...emojis.count - 1 {
-                if UIImage(named: "Sticker_\(index)") != nil {
-                    do {
-                        try stickerPack.addSticker("Sticker_\(index)", StickerStore.emojis[index])
-                    } catch let error { print(error.localizedDescription) }
-                } else {
-                    break
-                }
-            }
-
-            stickerPack.sendToWhatsApp { _ in }
+            UIPasteboard.general.setItems([["net.whatsapp.third-party.sticker-pack": result]], options: [.localOnly: true, .expirationDate: NSDate(timeIntervalSinceNow: 60)])
+            UIApplication.shared.open(URL(string: "whatsapp://stickerPack")!, options: [:], completionHandler: nil)
         }
     }
 
     public static func getData() -> [Sticker] {
         var result: [Sticker] = []
 
-        for index in 0...emojis.count - 1 {
+        for index in 0...30 - 1 {
             if UIImage(named: "Sticker_\(index)") != nil {
                 result.append(Sticker(image: "Sticker_\(index)", name: "comming soon ..."))
             } else {
