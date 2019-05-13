@@ -15,34 +15,29 @@ class ForceTouchGestureRecognizer: UIGestureRecognizer {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
-        if #available(iOS 9.0, *) {
-            if touches.count != 1 {
-                state = .failed
-            }
+        if touches.count != 1 {
+            state = .failed
         }
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesMoved(touches, with: event)
-        if #available(iOS 9.0, *) {
-
-            let touch = touches.first!
-            let value = touch.force / touch.maximumPossibleForce
-
-            if state == .possible {
-
-                if value > minimumValue {
-                    state = .began
-                }
+        let touch = touches.first!
+        let value = touch.force / touch.maximumPossibleForce
+        
+        if state == .possible {
+            
+            if value > minimumValue {
+                state = .began
+            }
+        } else {
+            
+            if value < (maxValue - tolerance) {
+                state = .ended
             } else {
-
-                if value < (maxValue - tolerance) {
-                    state = .ended
-                } else {
-                    maxValue = max(self.forceValue ?? 0, maxValue)
-                    self.forceValue = value
-                    state = .changed
-                }
+                maxValue = max(self.forceValue ?? 0, maxValue)
+                self.forceValue = value
+                state = .changed
             }
         }
     }

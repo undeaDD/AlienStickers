@@ -71,6 +71,7 @@
 		B683656822802B6200B0F9C8 /* iMessageSticker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iMessageSticker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B683656C22802B6400B0F9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B698EC4B2287FD0C007625F8 /* whatsapp.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = whatsapp.json; sourceTree = "<group>"; };
+		B69BD8FB2288A07700A7E79F /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		B69E8056228032F100D589DB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B69E80582280331000D589DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 				B69E8056228032F100D589DB /* WebKit.framework */,
 				B6D7DC75228029B00089C209 /* UIKit.framework */,
 				EF876F4D5C8BECBC74385999 /* Pods_AlienSticker.framework */,
+				B69BD8FB2288A07700A7E79F /* Messages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -468,6 +470,7 @@
 		B60821B4227B2BB800EE9F66 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -529,6 +532,7 @@
 		B60821B5227B2BB800EE9F66 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -585,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EA8D7BA1E6DF24CA635403EE /* Pods-AlienSticker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXLC3PQNC8;
@@ -610,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 827ADE5CDDBC6EBF18929F4A /* Pods-AlienSticker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AXLC3PQNC8;
