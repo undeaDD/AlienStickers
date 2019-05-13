@@ -9,8 +9,8 @@ class WebView: UIViewController {
         case datenschutz = "Datenschutz"
         case contact = "Kontakt"
 
-        public static func fromInt(_ integer: Int) -> WebType {
-            switch integer {
+        public static func fromInt(_ input: Int) -> WebType {
+            switch input {
             case 1:
                 return .datenschutz
             case 2:
@@ -34,5 +34,4 @@ class WebView: UIViewController {
             webView.loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         }
     }
-
 }

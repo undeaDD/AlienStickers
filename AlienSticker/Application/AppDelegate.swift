@@ -6,6 +6,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.window?.backgroundColor = #colorLiteral(red: 0.1176327839, green: 0.1176561788, blue: 0.117627643, alpha: 1)
+        UserDefaults.standard.set(true, forKey: "firstTimeLaunch")
         return true
     }
 
@@ -25,4 +26,15 @@ extension UIImage {
 
         return image
     }
+}
+
+extension UIApplicationDelegate {
+
+    func showTutorial() {
+        if let initialView = UIStoryboard(name: "Welcome", bundle: nil).instantiateInitialViewController(),
+           let presenter = self.window??.rootViewController {
+            presenter.present(initialView, animated: false, completion: nil)
+        }
+    }
+
 }

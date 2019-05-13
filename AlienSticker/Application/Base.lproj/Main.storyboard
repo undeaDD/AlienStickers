@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -245,59 +246,21 @@
                                 <color key="separatorColor" red="0.1176327839" green="0.1176561788" blue="0.117627643" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="modeCell" rowHeight="60" id="124-Ot-CbT" customClass="ModeCell" customModule="AlienSticker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="124-Ot-CbT" id="B3X-6E-P01">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mode" translatesAutoresizingMaskIntoConstraints="NO" id="KVQ-iX-v2z">
-                                                    <rect key="frame" x="16" y="12" width="35.5" height="35.5"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="KVQ-iX-v2z" secondAttribute="height" id="cP0-2z-V5L"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WHx-rg-8pN">
-                                                    <rect key="frame" x="67.5" y="16" width="330.5" height="29"/>
-                                                    <segments>
-                                                        <segment title="Zwischenspeicher"/>
-                                                        <segment title="Teilen Ansicht"/>
-                                                    </segments>
-                                                    <connections>
-                                                        <action selector="selectMode:" destination="124-Ot-CbT" eventType="valueChanged" id="WUZ-85-kHa"/>
-                                                    </connections>
-                                                </segmentedControl>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="WHx-rg-8pN" firstAttribute="leading" secondItem="KVQ-iX-v2z" secondAttribute="trailing" constant="16" id="ILK-Xp-WwV"/>
-                                                <constraint firstItem="KVQ-iX-v2z" firstAttribute="leading" secondItem="B3X-6E-P01" secondAttribute="leading" constant="16" id="Jsq-Oh-mcW"/>
-                                                <constraint firstItem="KVQ-iX-v2z" firstAttribute="top" secondItem="B3X-6E-P01" secondAttribute="top" constant="12" id="aYM-6Z-SUc"/>
-                                                <constraint firstAttribute="trailing" secondItem="WHx-rg-8pN" secondAttribute="trailing" constant="16" id="cu7-XM-Tvs"/>
-                                                <constraint firstItem="WHx-rg-8pN" firstAttribute="centerY" secondItem="B3X-6E-P01" secondAttribute="centerY" id="pfD-5D-ZAW"/>
-                                                <constraint firstAttribute="bottom" secondItem="KVQ-iX-v2z" secondAttribute="bottom" constant="12" id="y9U-46-nC2"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.2195851207" green="0.2196223736" blue="0.2195769846" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <outlet property="segment" destination="WHx-rg-8pN" id="hwG-Qd-BRs"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="60" id="pVd-4J-VEI" customClass="MenuCell" customModule="AlienSticker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="115.5" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pVd-4J-VEI" id="f7s-uU-Uat">
                                             <rect key="frame" x="0.0" y="0.0" width="376" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dZv-CE-UhS">
-                                                    <rect key="frame" x="16" y="14" width="31.5" height="31.5"/>
+                                                    <rect key="frame" x="16" y="16" width="27.5" height="27.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="dZv-CE-UhS" secondAttribute="height" id="yv1-z8-8aO"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGG-rT-aVD">
-                                                    <rect key="frame" x="63.5" y="19" width="296.5" height="22"/>
+                                                    <rect key="frame" x="59.5" y="11" width="300.5" height="38"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -305,11 +268,11 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dZv-CE-UhS" firstAttribute="leading" secondItem="f7s-uU-Uat" secondAttribute="leading" constant="16" id="BkT-0z-enl"/>
-                                                <constraint firstAttribute="bottom" secondItem="dZv-CE-UhS" secondAttribute="bottom" constant="14" id="JBZ-nI-ctl"/>
-                                                <constraint firstItem="TGG-rT-aVD" firstAttribute="top" secondItem="f7s-uU-Uat" secondAttribute="topMargin" constant="8" id="aDC-4M-3Dc"/>
+                                                <constraint firstAttribute="bottom" secondItem="dZv-CE-UhS" secondAttribute="bottom" constant="16" id="JBZ-nI-ctl"/>
+                                                <constraint firstItem="TGG-rT-aVD" firstAttribute="top" secondItem="f7s-uU-Uat" secondAttribute="topMargin" id="aDC-4M-3Dc"/>
                                                 <constraint firstItem="TGG-rT-aVD" firstAttribute="leading" secondItem="dZv-CE-UhS" secondAttribute="trailing" constant="16" id="gRo-2Z-N2L"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="TGG-rT-aVD" secondAttribute="bottom" constant="8" id="goX-eQ-Xr8"/>
-                                                <constraint firstItem="dZv-CE-UhS" firstAttribute="top" secondItem="f7s-uU-Uat" secondAttribute="top" constant="14" id="nmd-vJ-CSD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TGG-rT-aVD" secondAttribute="bottom" id="goX-eQ-Xr8"/>
+                                                <constraint firstItem="dZv-CE-UhS" firstAttribute="top" secondItem="f7s-uU-Uat" secondAttribute="top" constant="16" id="nmd-vJ-CSD"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="TGG-rT-aVD" secondAttribute="trailing" constant="8" id="oH5-6b-j1l"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -383,11 +346,10 @@
     <resources>
         <image name="apps" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
-        <image name="mode" width="30" height="30"/>
         <image name="sticker" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pSv-MG-OYW"/>
+        <segue reference="IbL-Tu-Q1u"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

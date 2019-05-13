@@ -21,19 +21,21 @@ class MenuViewController: UIViewController {
 extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return section == 2 ? 1 : 4
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
             return "Rechtliches"
-        default:
+        case 1:
             return "Informationen"
+        default:
+            return ""
         }
     }
 
@@ -45,6 +47,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as? MenuCell else {
             fatalError("invalid cell dequeued")
         }
+        cell.accessoryType = .disclosureIndicator
 
         switch (indexPath.section, indexPath.row) {
         case (0, 1):
@@ -61,6 +64,11 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
             cell.setUp("request", "Sticker wünschen")
         case (1, 3):
             cell.setUp("tutorial", "Einführung anzeigen")
+        case (2, 0):
+            let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "-"
+            let build = Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "-"
+            cell.setUp("version", "Version: \(version) (\(build))")
+            cell.accessoryType = .none
         default:
             cell.setUp("book", "Impressum")
         }
@@ -70,6 +78,8 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch (indexPath.section, indexPath.row) {
+        case (0, let index):
+            performSegue(withIdentifier: "showWebView", sender: WebView.WebType.fromInt(index))
         case (1, 0):
             SKStoreReviewController.requestReview()
         case (1, 1):
@@ -89,11 +99,9 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource, MFMail
             mail.setToRecipients(["dominic.drees@atino.de"])
             present(mail, animated: true)
         case (1, 3):
-            if let initialView = UIStoryboard(name: "Welcome", bundle: nil).instantiateInitialViewController() {
-                UIApplication.shared.delegate?.window??.rootViewController?.present(initialView, animated: true, completion: nil)
-            }
-        case (_, let index):
-            performSegue(withIdentifier: "showWebView", sender: WebView.WebType.fromInt(index))
+            UIApplication.shared.delegate?.showTutorial()
+        default:
+            break
         }
     }
 

@@ -13,8 +13,12 @@ class AppCell: UITableViewCell, SKStoreProductViewControllerDelegate {
         iconView.layer.cornerRadius = 12
         iconView.clipsToBounds = true
 
-        let text = NSMutableAttributedString(string: item.title + "\n", attributes: [.font: UIFont.systemFont(ofSize: 15, weight: .bold)])
-        text.append(NSAttributedString(string: item.description, attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .regular)]))
+        let text = NSMutableAttributedString(string: item.title + "\n", attributes: [
+            .font: UIFont.systemFont(ofSize: 15, weight: .bold)
+        ])
+        text.append(NSAttributedString(string: item.description, attributes: [
+            .font: UIFont.systemFont(ofSize: 12, weight: .regular)
+        ]))
         descriptionLabel.attributedText = text
 
         installButton.layer.borderWidth = 1
@@ -56,7 +60,7 @@ class AppCell: UITableViewCell, SKStoreProductViewControllerDelegate {
             // Download App from the Appstore
             let appstoreView = SKStoreProductViewController()
             appstoreView.delegate = self
-            appstoreView.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: self.url], completionBlock: nil)
+            appstoreView.loadProduct(withParameters: [SKStoreProductParameterITunesItemIdentifier: self.url])
             if let tabBar = UIApplication.shared.delegate?.window??.rootViewController as? TabBarController {
                 tabBar.present(appstoreView, animated: true)
             }

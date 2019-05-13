@@ -13,6 +13,16 @@ class StickerViewController: UIViewController {
         collectionView.dataSource = self
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        // Show Tutorial on first App Launch
+        if UserDefaults.standard.object(forKey: "firstTimeLaunch") as? Bool ?? true {
+            UserDefaults.standard.set(false, forKey: "firstTimeLaunch")
+            UIApplication.shared.delegate?.showTutorial()
+        }
+    }
+
 }
 
 extension StickerViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource, StickerCellDelegate {
@@ -60,7 +70,8 @@ extension StickerViewController: UICollectionViewDelegateFlowLayout, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? StickerCell, let sticker = cell.iconView.image?.withBackground(.black) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? StickerCell,
+           let sticker = cell.iconView.image?.withBackground(.black) {
             UIPasteboard.general.image = sticker
 
             let view = MessageView.viewFromNib(layout: .cardView)

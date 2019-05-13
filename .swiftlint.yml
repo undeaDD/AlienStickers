@@ -1,6 +1,5 @@
-disabled_rules:
- - line_length
 opt_in_rules:
+ - line_length
  - attributes
  - array_init
  - closure_body_length
@@ -33,4 +32,4 @@ opt_in_rules:
  - file_length
 excluded:
  - Pods
-
+line_length: 180 #UIKit functions will trigger on default value (120)

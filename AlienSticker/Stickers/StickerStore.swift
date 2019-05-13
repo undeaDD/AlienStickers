@@ -8,7 +8,11 @@ class StickerStore {
            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
            let result = try? JSONSerialization.data(withJSONObject: json, options: []) {
 
-            UIPasteboard.general.setItems([["net.whatsapp.third-party.sticker-pack": result]], options: [.localOnly: true, .expirationDate: NSDate(timeIntervalSinceNow: 60)])
+            UIPasteboard.general.setItems(
+                [["net.whatsapp.third-party.sticker-pack": result]],
+                options: [.localOnly: true, .expirationDate: NSDate(timeIntervalSinceNow: 60)]
+            )
+
             UIApplication.shared.open(URL(string: "whatsapp://stickerPack")!, options: [:], completionHandler: nil)
         }
     }
