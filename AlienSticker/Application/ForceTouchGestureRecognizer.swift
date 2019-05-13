@@ -24,14 +24,12 @@ class ForceTouchGestureRecognizer: UIGestureRecognizer {
         super.touchesMoved(touches, with: event)
         let touch = touches.first!
         let value = touch.force / touch.maximumPossibleForce
-        
+
         if state == .possible {
-            
             if value > minimumValue {
                 state = .began
             }
         } else {
-            
             if value < (maxValue - tolerance) {
                 state = .ended
             } else {
