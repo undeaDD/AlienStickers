@@ -22,6 +22,7 @@
 		B69E80592280331100D589DB /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69E80582280331000D589DB /* StoreKit.framework */; };
 		B69E805B2280366800D589DB /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */; };
 		B69E8060228061BE00D589DB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B69E805F228061BE00D589DB /* .swiftlint.yml */; };
+		B6B92EBF2289A2DD004D4A87 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B6B92EBE2289A2DD004D4A87 /* README.md */; };
 		B6D7DC362280264C0089C209 /* lizenzen.html in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC072280264C0089C209 /* lizenzen.html */; };
 		B6D7DC372280264C0089C209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC082280264C0089C209 /* Assets.xcassets */; };
 		B6D7DC382280264C0089C209 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6D7DC0A2280264C0089C209 /* LaunchScreen.storyboard */; };
@@ -82,6 +83,7 @@
 		B69E80582280331000D589DB /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B69E805A2280366800D589DB /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		B69E805F228061BE00D589DB /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		B6B92EBE2289A2DD004D4A87 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B6D7DC072280264C0089C209 /* lizenzen.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lizenzen.html; sourceTree = "<group>"; };
 		B6D7DC082280264C0089C209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6D7DC0B2280264C0089C209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				B69E805F228061BE00D589DB /* .swiftlint.yml */,
+				B6B92EBE2289A2DD004D4A87 /* README.md */,
 				B60821A6227B2BB600EE9F66 /* AlienSticker */,
 				B605348022898B830085AD6B /* iMessageExtension */,
 				B60821A5227B2BB600EE9F66 /* Products */,
@@ -361,6 +364,7 @@
 				B6D7DC392280264C0089C209 /* impressum.html in Resources */,
 				B6D7DC3B2280264C0089C209 /* datenschutz.html in Resources */,
 				B66058262285A24400BC655C /* kontakt.html in Resources */,
+				B6B92EBF2289A2DD004D4A87 /* README.md in Resources */,
 				B6D7DC362280264C0089C209 /* lizenzen.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
