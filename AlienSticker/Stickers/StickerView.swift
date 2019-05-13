@@ -65,6 +65,7 @@ extension StickerViewController: UICollectionViewDelegateFlowLayout, UICollectio
     }
 
     func openShareSheet(_ activityViewController: UIActivityViewController) {
+        SwiftMessages.hideAll()
         activityViewController.popoverPresentationController?.sourceView = self.view
         self.present(activityViewController, animated: true)
     }
