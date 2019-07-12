@@ -1,4 +1,4 @@
-Sticker Limits = 3 Images min - 30 Images max
+Sticker Limits = 3 Images min | 30 Images max
 
 How to add or modify Stickers:
 
@@ -15,10 +15,8 @@ How to add or modify Stickers:
     Edit the emoji list (min 1 emoji, max 3 emojis)
 
     3. Telegram:
-    Give the Images to Dominic D. and tell him to update the AlienSticker Pack
-    (Maintainer of the StickerPack inside Telegram)
+    Update the AlienSticker Pack on Telegram
 
     4. - 7. Facebook, Skype, Slack, WeChat:
-    Add Instruction how to update here !!!
     (Not implemented yet)
 
